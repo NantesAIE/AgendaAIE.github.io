@@ -1,0 +1,144 @@
+<html>
+<head>
+    <style>
+@page {
+size: 1920px 1080px;
+margin: 0;
+}
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: row;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            width: 70%;
+            padding-top:40px;
+            background-color: #1d3042;
+        }
+
+        h1 {
+            font-size: 52px;
+            font-weight: bold;
+            color: #ffffff;
+            text-align: left;
+            background-color: #ffffff59;
+            padding-left: 3rem;
+        }
+
+        #month-year{
+            color: #07b7c0;
+        }
+
+        #agenda-items{
+            height: 85%;
+            padding: 0 40px 0 15%;
+            display: flex;
+            justify-content: center;
+            align-items: start;
+            flex-direction: column;
+        }
+
+        .agenda-item {
+            justify-content: center;
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+        }
+
+        .date {
+            font-size: 32px;
+            color: #ffffff;
+            background-color: #07b7c0;
+            padding: 4px 15px 4px 15px;
+            border-radius: 15px;
+            margin-top: 5px;
+            min-width: 12rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .event-details {
+            margin-top: 10px;
+            font-size: 30px;
+            color: #ffffff;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .arrow {
+            margin-top: 5px;
+            font-size: 40px;
+            color: #ffffff;
+            font-weight: 700;
+        }
+
+        .event-name{
+            color: #ffffff;
+            font-style: italic;
+            font-size: 25px;
+            margin-left: 1.5rem;
+        }
+
+        .image-container {
+            width: 45%;
+            background-size: cover;
+            background-position: right;
+            height: 100vh;
+            position: relative;
+        }
+
+        .image-container img.main-image {
+            height: 100vh;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .logo {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            height: 80px; /* tu peux adapter selon ton logo */
+            z-index: 2;
+        }
+
+        .content {
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>AGENDA AIE - <span style="color: #07b7c0;">MAI 2025</span></h1>
+        
+        <div id="agenda-items">
+    <div class="agenda-item">
+    <div class="event-details">
+       <div class="date">lundi 5</div>
+        <div class="event-time">
+            <div class="arrow">&#8594; 08:00 - 20:00</div>
+            <div class="event-name">Réservation SOGETI (Fermeture AXEO)</div>
+        </div>
+    </div>
+</div>
+            <!-- Les événements sont insérés ici -->
+        </div>
+    </div>
+
+    <div class="image-container">
+    <img src="" style="height: 100vh; object-fit: cover;" />
+    <img src="" alt="Logo" class="logo" />
+
+</div>
+
+</body>
+</html>
