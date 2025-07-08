@@ -11,80 +11,105 @@ margin: 0;
             padding: 0;
             display: flex;
             flex-direction: row;
-            background-color: #f5f5f5;
+            background-color: #eef2fa; /* fond bleu très clair */
         }
 
         .container {
-            width: 70%;
-            padding-top:40px;
-            background-color: #1d3042;
+            width: 55%;
+            padding-top: 40px;
+            background-color: transparent;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
         }
 
         h1 {
-            font-size: 52px;
+            font-size: 36px;
             font-weight: bold;
-            color: #ffffff;
+            color: #fff;
             text-align: left;
-            background-color: #ffffff59;
-            padding-left: 3rem;
+            background: #156ca3;
+            padding: 18px 40px 18px 32px;
+            border-radius: 8px;
+            margin-left: 40px;
+            margin-bottom: 40px;
+            box-shadow: 0 2px 12px #00000087;
+            width: fit-content;
         }
 
-        #month-year{
-            color: #07b7c0;
-        }
-
-        #agenda-items{
-            height: 85%;
-            padding: 0 40px 0 15%;
+        #agenda-items {
+            width: 100%;
+            padding: 0 0 0 0;
             display: flex;
-            justify-content: center;
-            align-items: start;
             flex-direction: column;
+            gap: 24px;
+            align-items: center;
         }
 
         .agenda-item {
-            justify-content: center;
-            margin-bottom: 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: start;
-        }
-
-        .date {
-            font-size: 32px;
-            color: #ffffff;
-            background-color: #07b7c0;
-            padding: 4px 15px 4px 15px;
-            border-radius: 15px;
-            margin-top: 5px;
-            min-width: 12rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .event-details {
-            margin-top: 10px;
-            font-size: 30px;
-            color: #ffffff;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px #0001;
             display: flex;
             flex-direction: row;
             align-items: center;
-            gap: 1.5rem;
+            min-width: 420px;
+            min-height: 72px;
+            padding: 0;
+            width: 550px;
         }
 
-        .arrow {
-            margin-top: 5px;
-            font-size: 40px;
-            color: #ffffff;
-            font-weight: 700;
+        .event-details {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 0;
+            gap: 0;
         }
 
-        .event-name{
-            color: #ffffff;
-            font-style: italic;
-            font-size: 25px;
-            margin-left: 1.5rem;
+        .date-block {
+            background: #156ca3;
+            color: #fff;
+            font-weight: bold;
+            font-size: 18px;
+            border-radius: 12px;
+            padding: 10px 18px 6px 18px;
+            margin: 5px;
+            min-width: 120px;
+            width: 200px;
+            min-height: 60px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            gap: 2px;
+        }
+
+        .date-block .event-date {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 2px;
+        }
+
+        .date-block .event-time {
+            font-size: 16px;
+            font-weight: normal;
+            color: #eaf0f7;
+            margin-top: 0;
+        }
+
+        .time-block {
+            display: none;
+        }
+
+        .event-name {
+            color: #156ca3;
+            font-size: 18px;
+            font-weight: 500;
+            margin-left: 24px;
+            font-style: normal;
+            white-space: nowrap;
+            max-width: 200px;
         }
 
         .image-container {
@@ -92,6 +117,7 @@ margin: 0;
             background-position: right;
             height: 100vh;
             position: relative;
+            width: 45%;
         }
 
         .image-container img.main-image {
@@ -102,9 +128,9 @@ margin: 0;
 
         .logo {
             position: absolute;
-            top: 20px;
-            right: 20px;
-            height: 80px; /* tu peux adapter selon ton logo */
+            top: 32px;
+            right: 32px;
+            height: 60px;
             z-index: 2;
         }
 
@@ -117,89 +143,73 @@ margin: 0;
 <body>
 
     <div class="container">
-        <h1>AGENDA AIE - <span style="color: #07b7c0;">JUILLET 2025</span></h1>
+        <h1>AGENDA AIE</h1>
         
         <div id="agenda-items">
     <div class="agenda-item">
-    <div class="event-details">
-       <div class="date">
-  Mercredi 2
-</div>
-        <div class="event-time">
-            <div class="arrow">&#8594; 13:50 - 15:15</div>
-            <div class="event-name">WebConf DCX</div>
-        </div>
+  <div class="event-details">
+    <div class="date-block">
+      <div class="event-date">Aujourd'hui</div>
+      <div class="event-time"> 09:00 - 17:00</div>
     </div>
+    <div class="event-name">Portalis - I&A PI #9</div>
+  </div>
 </div><div class="agenda-item">
-    <div class="event-details">
-       <div class="date">
-  Mercredi 2
-</div>
-        <div class="event-time">
-            <div class="arrow">&#8594; 13:50 - 15:15</div>
-            <div class="event-name">WebConf DCX</div>
-        </div>
+  <div class="event-details">
+    <div class="date-block">
+      <div class="event-date">Mercredi 16 juillet</div>
+      <div class="event-time"> 08:30 - 19:00</div>
     </div>
+    <div class="event-name">ADN Booster - Boost Camp</div>
+  </div>
 </div><div class="agenda-item">
-    <div class="event-details">
-       <div class="date">
-  Mardi 8
-</div>
-        <div class="event-time">
-            <div class="arrow">&#8594; 09:00 - 13:00</div>
-            <div class="event-name">Portalis - I&A PI #9</div>
-        </div>
+  <div class="event-details">
+    <div class="date-block">
+      <div class="event-date">Lundi 21 juillet</div>
+      <div class="event-time"> 15:30 - 18:00</div>
     </div>
+    <div class="event-name">[HERMES] - Kick-off</div>
+  </div>
 </div><div class="agenda-item">
-    <div class="event-details">
-       <div class="date">
-  Jeudi 10
-</div>
-        <div class="event-time">
-            <div class="arrow">&#8594; 15:00 - 16:00</div>
-            <div class="event-name">Sales - Handicap x Inclusion IT</div>
-        </div>
+  <div class="event-details">
+    <div class="date-block">
+      <div class="event-date">Mardi 12 août</div>
+      <div class="event-time"> 10:00 - 11:00</div>
     </div>
+    <div class="event-name">Animation Intermission</div>
+  </div>
 </div><div class="agenda-item">
-    <div class="event-details">
-       <div class="date">
-  Mercredi 16
-</div>
-        <div class="event-time">
-            <div class="arrow">&#8594; 08:30 - 19:00</div>
-            <div class="event-name">ADN Booster - Boost Camp</div>
-        </div>
+  <div class="event-details">
+    <div class="date-block">
+      <div class="event-date">Mardi 9 septembre</div>
+      <div class="event-time"> 09:00 - 18:00</div>
     </div>
+    <div class="event-name">[HERMES] - Grooming incrément</div>
+  </div>
 </div><div class="agenda-item">
-    <div class="event-details">
-       <div class="date">
-  Lundi 21
-</div>
-        <div class="event-time">
-            <div class="arrow">&#8594; 15:30 - 18:00</div>
-            <div class="event-name">[HERMES] - Kick-off</div>
-        </div>
+  <div class="event-details">
+    <div class="date-block">
+      <div class="event-date">Mardi 9 septembre</div>
+      <div class="event-time"> 18:00 - 23:00</div>
     </div>
+    <div class="event-name">Recrutement Sogeti</div>
+  </div>
 </div><div class="agenda-item">
-    <div class="event-details">
-       <div class="date">
-  Mardi 9
-</div>
-        <div class="event-time">
-            <div class="arrow">&#8594; 09:00 - 18:00</div>
-            <div class="event-name">[HERMES] - Grooming incrément</div>
-        </div>
+  <div class="event-details">
+    <div class="date-block">
+      <div class="event-date">Jeudi 11 septembre</div>
+      <div class="event-time"> 00:00 - 00:00</div>
     </div>
+    <div class="event-name">Visite Client Perle (MinArm)</div>
+  </div>
 </div><div class="agenda-item">
-    <div class="event-details">
-       <div class="date">
-  Mardi 9
-</div>
-        <div class="event-time">
-            <div class="arrow">&#8594; 18:00 - 23:00</div>
-            <div class="event-name">Recrutement Sogeti</div>
-        </div>
+  <div class="event-details">
+    <div class="date-block">
+      <div class="event-date">Mardi 16 septembre</div>
+      <div class="event-time"> 09:00 - 18:00</div>
     </div>
+    <div class="event-name">PI Planning SNCF TRANSILIEN IV</div>
+  </div>
 </div>
             <!-- Les événements sont insérés ici -->
         </div>
